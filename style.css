@@ -118,3 +118,10 @@ header{
         #8f8f8f
     );
 }
+.card{
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
