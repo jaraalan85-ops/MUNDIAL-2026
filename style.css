@@ -101,3 +101,20 @@ header{
         #00d4ff
     );
 }
+.gold{
+    background:linear-gradient(
+        135deg,
+        #8a6d00,
+        #ffd700,
+        #8a6d00
+    );
+}
+
+.silver{
+    background:linear-gradient(
+        135deg,
+        #8f8f8f,
+        #e5e5e5,
+        #8f8f8f
+    );
+}
