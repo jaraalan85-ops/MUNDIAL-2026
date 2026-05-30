@@ -1,0 +1,303 @@
+album-mundial-electrica/
+│
+├── index.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copa Mundial Eléctrica 2026</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="intro">
+    <div class="intro-content">
+        <h1>⚡ COPA MUNDIAL ELÉCTRICA 2026 ⚡</h1>
+        <h2>Proyecto Nuclear</h2>
+
+        <button id="enterBtn">
+            Ingresar al Álbum
+        </button>
+    </div>
+</div>
+
+<div id="album" class="hidden">
+
+    <header>
+        <h1>🏆 Álbum Mundial Eléctrico</h1>
+        <p>Ingeniería Eléctrica</p>
+    </header>
+
+    <div class="cards-container">
+
+        <div class="card">
+            <div class="card-inner">
+
+                <div class="card-front diamond">
+                    <img src="img/heisenberg.jpg">
+                    <h3>Heisenberg</h3>
+                    <p>Matías Mazzeo</p>
+                </div>
+
+                <div class="card-back">
+                    <h3>💎 Domador de Clientes</h3>
+                    <p><strong>Superpoder:</strong> Responder preguntas innecesarias.</p>
+                    <p><strong>Debilidad:</strong> Reuniones eternas.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+
+                <div class="card-front diamond">
+                    <img src="img/polvorita.jpg">
+                    <h3>Polvorita</h3>
+                    <p>Celina Centurión</p>
+                </div>
+
+                <div class="card-back">
+                    <h3>💎 Guardiana del Reactor</h3>
+                    <p><strong>Superpoder:</strong> Detectar errores.</p>
+                    <p><strong>Debilidad:</strong> Discutir sin fundamentos.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+
+                <div class="card-front gold">
+                    <img src="img/cupido.jpg">
+                    <h3>Cupido</h3>
+                    <p>Alan Jara</p>
+                </div>
+
+                <div class="card-back">
+                    <h3>🥇 HVAC Master</h3>
+                    <p><strong>Especialidad:</strong> Instrumentación.</p>
+                    <p><strong>Debilidad:</strong> Cambios de último momento.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+
+                <div class="card-front gold">
+                    <img src="img/jhonnia.jpg">
+                    <h3>JhonnIA</h3>
+                    <p>Jhonathan Cabral</p>
+                </div>
+
+                <div class="card-back">
+                    <h3>🤖 Planillas Potentes™</h3>
+                    <p><strong>IA:</strong> 99</p>
+                    <p><strong>Debilidad:</strong> Hacerlo manual.</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
+├── style.css
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Orbitron',sans-serif;
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+}
+
+#intro{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    radial-gradient(circle,#133c77,#050816);
+}
+
+.intro-content{
+    text-align:center;
+    animation:fadeIn 2s;
+}
+
+.intro-content h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+button{
+    padding:15px 30px;
+    border:none;
+    cursor:pointer;
+    border-radius:10px;
+    font-size:1rem;
+    font-weight:bold;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.hidden{
+    display:none;
+}
+
+header{
+    text-align:center;
+    padding:30px;
+}
+
+.cards-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    padding:30px;
+}
+
+.card{
+    width:280px;
+    height:420px;
+    perspective:1000px;
+}
+
+.card-inner{
+    width:100%;
+    height:100%;
+    position:relative;
+    transform-style:preserve-3d;
+    transition:1s;
+}
+
+.card:hover .card-inner{
+    transform:rotateY(180deg);
+}
+
+.card-front,
+.card-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:20px;
+    backface-visibility:hidden;
+}
+
+.card-front{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.card-front img{
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:15px;
+}
+
+.card-back{
+    background:#111827;
+    transform:rotateY(180deg);
+    padding:25px;
+}
+
+.gold{
+    background:linear-gradient(
+    135deg,
+    #8a6d00,
+    #ffd700,
+    #8a6d00);
+}
+
+.diamond{
+    background:linear-gradient(
+    135deg,
+    #00d4ff,
+    #74f0ff,
+    #00d4ff);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+├── app.js
+const enterBtn = document.getElementById("enterBtn");
+const intro = document.getElementById("intro");
+const album = document.getElementById("album");
+
+enterBtn.addEventListener("click", () => {
+
+    intro.style.opacity = "0";
+
+    setTimeout(() => {
+        intro.style.display = "none";
+
+        album.classList.remove("hidden");
+
+        album.style.animation = "fadeAlbum 1s";
+    }, 1000);
+
+});
+
+const style = document.createElement("style");
+
+style.innerHTML = `
+@keyframes fadeAlbum{
+from{
+opacity:0;
+transform:scale(.95);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+`;
+
+document.head.appendChild(style);
+│
+└── img/
+    ├── heisenberg.jpg
+    ├── diegoo.jpg
+    ├── polvorita.jpg
+    ├── cupido.jpg
+    ├── paredes.jpg
+    ├── apu.jpg
+    ├── jhonnia.jpg
+    └── chris.jpg
